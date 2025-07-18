@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e31f5d76-a080-4678-a823-b01716829f0b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/coffee-shop/app/_layout.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coffee-shop/jsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coffee-shop/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/coffee-shop/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coffee-shop/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coffee-shop/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/coffee-shop/app.base.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coffee-shop/app/(tabs)/_layout.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coffee-shop/app/(tabs)/explore.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coffee-shop/app/(tabs)/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coffee-shop/app/+not-found.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coffee-shop/app/_layout.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coffee-shop/components/Collapsible.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coffee-shop/components/ExternalLink.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coffee-shop/components/HapticTab.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coffee-shop/components/HelloWave.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coffee-shop/components/ParallaxScrollView.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coffee-shop/components/ThemedText.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coffee-shop/components/ThemedView.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coffee-shop/components/ui/IconSymbol.ios.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coffee-shop/components/ui/IconSymbol.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coffee-shop/components/ui/TabBarBackground.ios.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coffee-shop/components/ui/TabBarBackground.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coffee-shop/constants/Colors.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coffee-shop/hooks/useColorScheme.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coffee-shop/hooks/useColorScheme.web.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coffee-shop/hooks/useThemeColor.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coffee-shop/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/coffee-shop/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coffee-shop/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/coffee-shop/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coffee-shop/scripts/reset-project.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coffee-shop/tsconfig.json" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/coffee-shop" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2zUzaLZ3Kpz8HImWjqESd25Ipi9" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editing.templates",
+    "ts.external.directory.path": "E:\\Learning\\React Native With Expo\\coffee-shop\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="ReactDesignerToolWindowState">
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.intellij.reactbuddy.reactComponents" value="false" />
+        <entry key="com.intellij.reactbuddy.reactInspector" value="false" />
+        <entry key="com.intellij.reactbuddy.storybook" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Learning\React Native With Expo\coffee-shop\app" />
+      <recent name="E:\Learning\React Native With Expo\coffee-shop\assets\animations" />
+      <recent name="E:\Learning\React Native With Expo\coffee-shop\components" />
+      <recent name="E:\Learning\React Native With Expo\coffee-shop\components\Animation" />
+      <recent name="E:\Learning\React Native With Expo\backend\public" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-WS-251.23774.424" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e31f5d76-a080-4678-a823-b01716829f0b" name="Changes" comment="" />
+      <created>1751800502989</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1751800502989</updated>
+      <workItem from="1751800505644" duration="3000" />
+      <workItem from="1751801168280" duration="282000" />
+      <workItem from="1751801596070" duration="1499000" />
+      <workItem from="1751805582247" duration="569000" />
+      <workItem from="1751806192148" duration="3243000" />
+      <workItem from="1751809481419" duration="2417000" />
+      <workItem from="1751812326751" duration="2713000" />
+      <workItem from="1751872729254" duration="4855000" />
+      <workItem from="1751879758409" duration="9525000" />
+      <workItem from="1751891672951" duration="610000" />
+      <workItem from="1751897556219" duration="1117000" />
+      <workItem from="1751904096598" duration="1770000" />
+      <workItem from="1751953889238" duration="1940000" />
+      <workItem from="1752041164815" duration="861000" />
+      <workItem from="1752075289653" duration="2663000" />
+      <workItem from="1752126090602" duration="1661000" />
+      <workItem from="1752127865927" duration="11501000" />
+      <workItem from="1752140152890" duration="9616000" />
+      <workItem from="1752161342057" duration="1724000" />
+      <workItem from="1752163145252" duration="4352000" />
+      <workItem from="1752214963195" duration="17275000" />
+      <workItem from="1752306449762" duration="8355000" />
+      <workItem from="1752331265087" duration="556000" />
+      <workItem from="1752331904640" duration="8351000" />
+      <workItem from="1752420268949" duration="6814000" />
+      <workItem from="1752479174261" duration="18317000" />
+      <workItem from="1752500011746" duration="2666000" />
+      <workItem from="1752503209733" duration="4239000" />
+      <workItem from="1752558646835" duration="1101000" />
+      <workItem from="1752560184361" duration="202000" />
+      <workItem from="1752561163296" duration="22524000" />
+      <workItem from="1752649125126" duration="23569000" />
+      <workItem from="1752734028343" duration="15728000" />
+      <workItem from="1752762997820" duration="15000" />
+      <workItem from="1752763079066" duration="6109000" />
+      <workItem from="1752823750907" duration="47000" />
+      <workItem from="1752823829999" duration="4138000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/backend/src/data/coffeeData/coffeeData.js</url>
+          <line>35</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/backend/src/models/Cart.js</url>
+          <line>17</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/coffee-shop/features/cart/index.js</url>
+          <line>112</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
