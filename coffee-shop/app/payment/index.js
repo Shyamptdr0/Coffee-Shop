@@ -11,8 +11,8 @@ import {
 import {Ionicons} from '@expo/vector-icons';
 import {useSelector, useDispatch} from 'react-redux';
 import {useRouter, useLocalSearchParams} from 'expo-router';
-import {createOrder} from '../../features/order';
-import {fetchCartItems} from '../../features/cart';
+import {createOrder} from '../../features/order/index';
+import {fetchCartItems} from '../../features/cart/index';
 import AlertBox from "../../components/AlertBox/Alert";
 import gpay from "../../assets/payment/gpay.png";
 import amazon from "../../assets/payment/amazonpay.png";
@@ -91,17 +91,19 @@ export default function PaymentScreen() {
         return (
             <View style={styles.successContainer}>
                 {/* Lottie Animation */}
-                <PaymentAnimation source={paymentSuccessAnimation} />
+                <View>
+                    <PaymentAnimation source={paymentSuccessAnimation} />
 
-                {/* Success Text */}
-                <Text style={styles.icon}>✅</Text>
-                <Text style={styles.successText}>Payment Successful!</Text>
-                <Text style={styles.subText}>Your order has been placed.</Text>
+                    {/* Success Text */}
+                    <Text style={styles.icon}>✅</Text>
+                    <Text style={styles.successText}>Payment Successful!</Text>
+                    <Text style={styles.subText}>Your order has been placed.</Text>
 
+                </View>
                 {/* Button to Order History */}
                 <TouchableOpacity
                     style={styles.historyBtn}
-                    onPress={() => router.replace('/(tabs)/history')}
+                    onPress={() => router.push('/(tabs)/history')}
                 >
                     <Text style={styles.historyBtnText}>See Order History</Text>
                 </TouchableOpacity>
@@ -307,14 +309,14 @@ const styles = StyleSheet.create({
         textAlign: 'center',
     },
     historyBtn: {
-        backgroundColor: '#fff',
+        backgroundColor: '#D17842',
         paddingVertical: 10,
         paddingHorizontal: 20,
         borderRadius: 10,
         marginTop: 30,
     },
     historyBtnText: {
-        color: '#000',
+        color: '#fff',
         fontWeight: 'bold',
     },
 

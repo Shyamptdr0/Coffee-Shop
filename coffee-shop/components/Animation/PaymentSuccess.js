@@ -8,7 +8,7 @@ const { width, height } = Dimensions.get('window');
 const PaymentAnimation = ({ source }) => {
     return (
         <View style={styles.container}>
-            <BlurView intensity={70} tint="dark" style={StyleSheet.absoluteFill} />
+            {/*<BlurView intensity={70} tint="dark" style={StyleSheet.absoluteFill} />*/}
             <LottieView
                 source={source}
                 autoPlay

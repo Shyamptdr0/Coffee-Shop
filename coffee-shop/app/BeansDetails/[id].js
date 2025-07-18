@@ -136,7 +136,6 @@ export default function BeansDetails() {
             quantity,
         };
 
-        console.log("🧾 Cart item data:", cartItem);
 
         // Guard clause
         if (!user.id || !productId || !size || !quantity) {

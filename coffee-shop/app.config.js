@@ -2,11 +2,11 @@ import 'dotenv/config';
 
 export default {
     expo: {
-        name: "coffee-shop",
+        name: "Coffee Shop",
         slug: "coffee-shop",
         version: "1.0.0",
         orientation: "portrait",
-        icon: "./assets/images/icon.png",
+        icon: "./assets/images/logo.png",
         scheme: "coffeeshop",
         userInterfaceStyle: "automatic",
         newArchEnabled: true,
@@ -14,8 +14,10 @@ export default {
             supportsTablet: true
         },
         android: {
+            package: "com.shyamptdr.coffeeshop",
+            versionCode: 1,
             adaptiveIcon: {
-                foregroundImage: "./assets/images/adaptive-icon.png",
+                foregroundImage: "./assets/images/logo.png",
                 backgroundColor: "#ffffff"
             },
             edgeToEdgeEnabled: true
@@ -23,14 +25,14 @@ export default {
         web: {
             bundler: "metro",
             output: "static",
-            favicon: "./assets/images/favicon.png"
+            favicon: "./assets/images/logo.png"
         },
         plugins: [
             "expo-router",
             [
                 "expo-splash-screen",
                 {
-                    image: "./assets/images/splash-icon.png",
+                    image: "./assets/images/logo.png",
                     imageWidth: 200,
                     resizeMode: "contain",
                     backgroundColor: "#ffffff"
@@ -40,8 +42,17 @@ export default {
         experiments: {
             typedRoutes: true
         },
+        updates: {
+            url: "https://u.expo.dev/7745cedd-02b2-4559-95f3-37cc001f1370"
+        },
+        runtimeVersion: {
+            policy: "appVersion"
+        },
         extra: {
-            BASE_URL: process.env.BASE_URL
+            BASE_URL: process.env.BASE_URL,
+            eas: {
+                projectId: "7745cedd-02b2-4559-95f3-37cc001f1370"
+            }
         }
     }
 };

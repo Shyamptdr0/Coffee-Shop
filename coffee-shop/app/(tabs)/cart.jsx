@@ -87,7 +87,7 @@ export default function CartScreen() {
         try {
             setAdding(true);
             router.push({
-                pathname: '/(payment)',
+                pathname: '/payment',
                 params: {
                     userId: user.id,
                     total: calculateTotal(),
