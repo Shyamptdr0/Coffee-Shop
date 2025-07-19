@@ -11,8 +11,9 @@ import {useDispatch, useSelector} from 'react-redux';
 import {router} from 'expo-router';
 import moment from 'moment';
 import {getUserOrders} from "../../features/order";
+import logo from "../../assets/logo/huge/logo-1.png";
 
-export default function HistoryScreen() {
+export default function History() {
     const dispatch = useDispatch();
     const {isAuthenticated, user} = useSelector((state) => state.auth);
     const {orderItems} = useSelector((state) => state.order);
@@ -48,8 +49,11 @@ export default function HistoryScreen() {
             <ScrollView contentContainerStyle={styles.scroll}>
                 {orderItems.length === 0 ? (
                     <View style={styles.noOrdersContainer}>
+                        <Image source={logo} style={{width: 200, height: 150}}/>
                         <Text style={styles.noOrdersText}>You have no orders yet.</Text>
+                        <Text style={styles.noOrdersText}>Order it fast...</Text>
                     </View>
+
                 ) : (
                     orderItems.map((order, index) => (
                         <View key={index} style={styles.orderBlock}>
@@ -87,7 +91,8 @@ export default function HistoryScreen() {
                                                 <View style={styles.leftText}>
                                                     <Text style={styles.itemName}>{item.name || 'Unknown Item'}</Text>
                                                     <Text style={styles.sizeText}>{item.size || '-'}</Text>
-                                                    <Text style={styles.itemTotal}>Total: ₹ {itemTotal.toFixed(2)}</Text>
+                                                    <Text style={styles.itemTotal}>Total:
+                                                        ₹ {itemTotal.toFixed(2)}</Text>
                                                 </View>
                                             </View>
 
@@ -98,7 +103,7 @@ export default function HistoryScreen() {
                                     </View>
                                 );
                             })}
-                            <View style={styles.divider} />
+                            <View style={styles.divider}/>
                         </View>
                     ))
                 )}
@@ -111,7 +116,7 @@ const styles = StyleSheet.create({
 
     container: {
         flex: 1,
-        backgroundColor: '#0F0F0F',
+        backgroundColor: '#000',
     },
     scroll: {
         padding: 16,
@@ -235,13 +240,15 @@ const styles = StyleSheet.create({
     },
 
     noOrdersContainer: {
-        marginTop: 100,
-        alignItems: 'center',
+        flex: 1,
         justifyContent: 'center',
+        alignItems: 'center',
+        paddingHorizontal: 30,
+        paddingVertical: 230,
     },
+
     noOrdersText: {
-        color: '#aaa',
-        fontSize: 18,
+        color: '#aaa', fontSize: 24, textAlign: 'center'
     },
 
 });

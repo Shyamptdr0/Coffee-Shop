@@ -20,8 +20,8 @@ import DeleteAnimation from '../../components/Animation/DeleteAnimation';
 import deleteLottie from '../../assets/animations/Delete bubble.json';
 import PopUpAnimation from '../../components/Animation/PopUpAnimation';
 import successAnimation from '../../assets/animations/Success.json';
-import { createOrder } from '../../features/order/index';
 import { router } from 'expo-router';
+import logo from "../../assets/logo/huge/logo-1.png"
 
 export default function CartScreen() {
     const dispatch = useDispatch();
@@ -117,7 +117,9 @@ export default function CartScreen() {
         <View style={styles.container}>
             {cartItems?.length === 0 ? (
                 <View style={styles.emptyCartContainer}>
-                    <Text style={styles.emptyCartText}>🛒 Your cart is empty</Text>
+                    <Image source={logo} style={{width: 200, height: 150}}/>
+                    <Text style={styles.emptyCartText}>Your coffee cup is empty.</Text>
+                    <Text style={styles.emptyCartText}>It's Time for a refill!</Text>
                 </View>
             ) : (
                 <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{ paddingBottom: 20 }}>
@@ -203,10 +205,10 @@ export default function CartScreen() {
 }
 
 const styles = StyleSheet.create({
-    container: { flex: 1, backgroundColor: '#0D0D0D', paddingTop: 5, paddingHorizontal: 20 },
+    container: { flex: 1, backgroundColor: '#000', paddingTop: 5, paddingHorizontal: 20 },
     card: {
         flexDirection: 'row',
-        backgroundColor: '#1E1E1E',
+        backgroundColor: '#0D0D0D',
         borderRadius: 20,
         padding: 16,
         marginBottom: 16,
@@ -217,7 +219,7 @@ const styles = StyleSheet.create({
     name: { fontSize: 16, color: '#fff', fontWeight: 'bold' },
     sub: { color: '#aaa', fontSize: 13, marginVertical: 2 },
     chip: {
-        backgroundColor: '#2C2C2C',
+        backgroundColor: '#000',
         paddingHorizontal: 10,
         paddingVertical: 4,
         borderRadius: 8,
@@ -238,7 +240,7 @@ const styles = StyleSheet.create({
         paddingVertical: 20,
         borderTopColor: '#333',
         borderTopWidth: 1,
-        backgroundColor: '#0D0D0D',
+        backgroundColor: '#000',
     },
     totalText: { color: '#aaa', fontSize: 18 },
     totalAmount: { color: '#fff', fontSize: 24, fontWeight: 'bold' },
@@ -262,6 +264,12 @@ const styles = StyleSheet.create({
     },
     popupAnimation: { width: 150, height: 150 },
     popupText: { color: '#fff', fontSize: 16, marginTop: 10, fontWeight: 'bold', textAlign: 'center' },
-    emptyCartContainer: { flex: 1, justifyContent: 'center', alignItems: 'center', paddingVertical: 60 },
-    emptyCartText: { color: '#aaa', fontSize: 18, textAlign: 'center' },
+    emptyCartContainer: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        paddingHorizontal: 30,
+        paddingVertical: 230,
+    },
+    emptyCartText: { color: '#aaa', fontSize: 24, textAlign: 'center' },
 });

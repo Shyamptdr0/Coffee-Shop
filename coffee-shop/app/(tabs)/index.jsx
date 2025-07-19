@@ -18,6 +18,9 @@ import {router} from "expo-router";
 import {addToCart} from "../../features/cart";
 import PopUpAnimation from "../../components/Animation/PopUpAnimation";
 import successAnimation from "../../assets/animations/Success.json";
+import image from "../../assets/logo/huge/logo-2.png"
+import logo from "../../assets/logo/huge/logo-1.png"
+
 
 export default function Index() {
     const [selectedCategory, setSelectedCategory] = useState("All");
@@ -91,7 +94,9 @@ export default function Index() {
                     flexDirection: "row",
                     justifyContent: "space-between",
                     alignItems: "center",
-                    padding: 15,
+                    paddingLeft: 10,
+                    paddingRight: 10,
+                    padding: 10,
                 }}
             >
                 <View>
@@ -99,26 +104,26 @@ export default function Index() {
                     <Text style={{color: "#fff", fontSize: 22, fontWeight: "bold"}}>
                         {isAuthenticated && user?.userName ? user.userName : "Guest"}
                     </Text>
+
                 </View>
+                <Image source={image} style={{width: 120, height: 70}}/>
+                <View>
 
-                <TouchableOpacity onPress={() => router.push("/Profile")}>
-                    <Image
-                        source={{uri: user?.profile || "https://i.pravatar.cc/100"}}
-                        style={{
-                            width: 45,
-                            height: 45,
-                            borderRadius: 999,
-                            borderWidth: 2,
-                            borderColor: "#D17842",
-                        }}
-                    />
-                </TouchableOpacity>
+                    <TouchableOpacity onPress={() => router.push("/Profile")}>
+                        <Image
+                            // source={{uri: user?.profile || "https://i.pravatar.cc/100"}}
+                            source={logo}
+                            style={{
+                                width: 45,
+                                height: 45,
+                                borderRadius: 999,
+                                borderWidth: 2,
+                                borderColor: "#D17842",
+                            }}
+                        />
+                    </TouchableOpacity>
+                </View>
             </View>
-
-            {/* Title */}
-            <Text style={{color: "#fff", fontSize: 26, fontWeight: "bold", marginBottom: 10, margin: 15,}}>
-                Find the best coffee for you
-            </Text>
 
 
             <ScrollView contentContainerStyle={{padding: 16, paddingBottom: 100}}>

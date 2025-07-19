@@ -28,6 +28,8 @@ export default function PaymentScreen() {
     const [isPaid, setIsPaid] = useState(false);
     const [selectedMethod, setSelectedMethod] = useState(null);
     const [loading, setLoading] = useState(false);
+    const [showAnimation, setShowAnimation] = useState(true);
+
 
 
     const methods = [
@@ -90,17 +92,20 @@ export default function PaymentScreen() {
     if (isPaid) {
         return (
             <View style={styles.successContainer}>
-                {/* Lottie Animation */}
-                <View>
-                    <PaymentAnimation source={paymentSuccessAnimation} />
-
-                    {/* Success Text */}
+                {showAnimation && (
+                    <PaymentAnimation
+                        source={paymentSuccessAnimation}
+                        onFinish={() => setShowAnimation(false)}
+                    />
+                )}
+                <View style={{ alignItems: 'center' }}>
                     <Text style={styles.icon}>✅</Text>
                     <Text style={styles.successText}>Payment Successful!</Text>
-                    <Text style={styles.subText}>Your order has been placed.</Text>
+                    <Text style={styles.subText}>Your favorite coffee is on its way ☕</Text>
+
 
                 </View>
-                {/* Button to Order History */}
+
                 <TouchableOpacity
                     style={styles.historyBtn}
                     onPress={() => router.push('/(tabs)/history')}
@@ -295,6 +300,8 @@ const styles = StyleSheet.create({
         fontSize: 32,
         marginTop: 20,
         color: 'white',
+        alignItems: "center",
+        justifyContent: "center",
     },
     successText: {
         fontSize: 24,
@@ -307,7 +314,9 @@ const styles = StyleSheet.create({
         marginTop: 5,
         color: '#ccc',
         textAlign: 'center',
+        fontStyle: 'italic',
     },
+
     historyBtn: {
         backgroundColor: '#D17842',
         paddingVertical: 10,

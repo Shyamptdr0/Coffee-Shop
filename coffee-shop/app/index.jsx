@@ -1,24 +1,24 @@
 import { Text, View, TouchableOpacity } from "react-native";
 import { useRouter } from "expo-router";
 import { Image } from "expo-image";
-import logo from "../assets/images/logo-1.png";
-import {Colors} from "../constant/colors"
+import logo from "../assets/logo/huge/logo-1.png";
+
 
 export default function Index() {
     const router = useRouter();
 
     return (
-        <View className="flex-1 p-8 items-center " style={{ backgroundColor: Colors.BLACK_1 }}>
+        <View className="flex-1 p-8 items-center " style={{ backgroundColor: "#000"}}>
             {/* Centered Image at Top */}
-            <View className="w-full items-center mt-10">
-                <Image source={logo} style={{ width: 250, height: 200 }} />
+            <View className="w-full items-center mt-6">
+                <Image source={logo} style={{ width: 270, height: 270 }} />
             </View>
 
             {/* Title */}
-            <Text className="font-semibold text-[50px] text-white mt-8">Coffee Shop</Text>
+            <Text className="font-semibold text-[50px] text-white mt-[-30px]">Coffee Shop</Text>
 
             {/* Signup & Login Buttons */}
-            <View>
+            <View className="mt-10">
                 <TouchableOpacity
                     onPress={() => router.push("/(auth)/signup")}
                     className="mt-6 bg-[#D17842] px-8 py-3 rounded-full"
@@ -41,7 +41,7 @@ export default function Index() {
 
             {/* Quote with Gradient Background */}
 
-               <View className="mt-16 border border-gray-500 p-8 pl-4 rounded-r-full">
+               <View className="mt-20 border border-gray-500 p-8 pl-4 rounded-r-full">
                    <Text className="text-white text-[23px]">Some days make the coffee,</Text>
                    <Text className="text-white text-[23px] mt-2">other days the coffee makes you</Text>
                </View>

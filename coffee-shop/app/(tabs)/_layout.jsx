@@ -1,8 +1,7 @@
 import { Tabs, router } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Image } from "react-native";
-import { useSelector } from "react-redux";
-import { useEffect } from "react";
+
 
 const icons = {
     index: require("../../assets/icons/home.png"),

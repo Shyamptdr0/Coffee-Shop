@@ -18,7 +18,8 @@ function AuthWrapper({children}) {
 
     useEffect(() => {
         dispatch(checkAuth());
-    }, []);
+    }, [dispatch]);
+
 
     useEffect(() => {
         if (isLoading || segments.length === 0) return;

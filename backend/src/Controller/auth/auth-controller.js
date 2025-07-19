@@ -17,12 +17,13 @@ export const registerUser = async (req, res) => {
 
         const checkEmail = await User.findOne({ email });
         if (checkEmail) {
-            return res.json({ success: false, message: "Email already exists" });
+            return res.status(400).json({ success: false, message: "Email already exists" });
+
         }
 
         const checkUser = await User.findOne({ userName });
         if (checkUser) {
-            return res.json({ success: false, message: "Username already exists" });
+            return res.status(400).json({ success: false, message: "Username already exists" });
         }
 
         const hashPassword = await bcrypt.hash(password, 12);

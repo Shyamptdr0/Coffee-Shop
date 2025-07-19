@@ -12,6 +12,7 @@ import {useSelector, useDispatch} from 'react-redux';
 import {Ionicons} from '@expo/vector-icons';
 import {router} from 'expo-router';
 import {getFavourites, removeFromFav} from '../../features/like/index';
+import logo from "../../assets/logo/huge/logo-1.png";
 
 const {width} = Dimensions.get("window");
 
@@ -78,8 +79,9 @@ export default function LikeScreen() {
         <View style={{ flex: 1, backgroundColor: '#000' }}>
             {favourites.length === 0 ? (
                 <View style={styles.emptyContainer}>
-                    <Ionicons name="heart-dislike" size={60} color="#555" />
-                    <Text style={styles.emptyText}>No favorites yet</Text>
+                    <Image source={logo} style={{width: 200, height: 150}}/>
+                    <Text style={styles.emptyText}>Your favorite coffee is waiting... </Text>
+                    <Text style={styles.emptyText}>don’t keep it waiting too long!</Text>
                 </View>
             ) : (
                 <FlatList
@@ -187,12 +189,10 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         paddingHorizontal: 30,
+        paddingVertical: 230,
     },
     emptyText: {
-        color: '#fff',
-        fontSize: 22,
-        fontWeight: 'bold',
-        marginTop: 20,
+        color: '#aaa', fontSize: 24, textAlign: 'center'
     },
     emptySubText: {
         color: '#888',

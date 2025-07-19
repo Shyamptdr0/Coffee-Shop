@@ -1,9 +1,11 @@
 import React from "react";
-import { View, Text, Image, TouchableOpacity } from "react-native";
+import { View, Text, Image, TouchableOpacity, StyleSheet } from "react-native";
 import { useDispatch, useSelector } from "react-redux";
 import { logoutUser } from "../../features/auth/authSlice";
 import { router } from "expo-router";
-import {useToast} from "react-native-toast-notifications";
+import { useToast } from "react-native-toast-notifications";
+import logo from "../../assets/logo/huge/logo-1.png";
+import { LinearGradient } from "expo-linear-gradient";
 
 export default function Profile() {
     const toast = useToast();
@@ -13,41 +15,80 @@ export default function Profile() {
     const handleLogout = async () => {
         await dispatch(logoutUser());
         router.replace("/(auth)");
-        toast.show( "Logout Successfully" , {type:"success"})
+        toast.show("Logged out successfully", { type: "success" });
     };
 
     return (
-        <View style={{ flex: 1, backgroundColor: "#000", alignItems: "center", justifyContent: "center", padding: 20 }}>
+        <LinearGradient
+            colors={["#1C1C1E", "#000"]}
+            style={styles.container}
+        >
             <Image
-                source={{ uri: user?.profile || "https://i.pravatar.cc/100" }}
-                style={{
-                    width: 100,
-                    height: 100,
-                    borderRadius: 999,
-                    borderWidth: 2,
-                    borderColor: "#D17842",
-                    marginBottom: 20,
-                }}
+                source={logo}
+                style={styles.profileImage}
             />
 
-            <Text style={{ color: "#fff", fontSize: 22, fontWeight: "bold", marginBottom: 10 }}>
+            <Text style={styles.userName}>
                 {isAuthenticated ? user?.userName : "Guest"}
             </Text>
-            <Text style={{ color: "#ccc", fontSize: 16, marginBottom: 30 }}>
-                {user?.email}
-            </Text>
+            <Text style={styles.email}>{user?.email}</Text>
 
-            <TouchableOpacity
-                onPress={handleLogout}
-                style={{
-                    backgroundColor: "#D17842",
-                    paddingHorizontal: 30,
-                    paddingVertical: 12,
-                    borderRadius: 25,
-                }}
-            >
-                <Text style={{ color: "#fff", fontSize: 16 }}>Logout</Text>
+            <View style={styles.divider} />
+
+            <TouchableOpacity onPress={handleLogout} style={styles.logoutButton}>
+                <Text style={styles.logoutText}>Logout</Text>
             </TouchableOpacity>
-        </View>
+        </LinearGradient>
     );
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center",
+        padding: 24,
+    },
+    profileImage: {
+        width: 120,
+        height: 120,
+        borderRadius: 60,
+        borderWidth: 3,
+        borderColor: "#D17842",
+        marginBottom: 20,
+    },
+    userName: {
+        color: "#fff",
+        fontSize: 24,
+        fontWeight: "700",
+        marginBottom: 6,
+    },
+    email: {
+        color: "#aaa",
+        fontSize: 16,
+        marginBottom: 30,
+    },
+    divider: {
+        width: "80%",
+        height: 1,
+        backgroundColor: "#333",
+        marginVertical: 20,
+    },
+    logoutButton: {
+        backgroundColor: "#D17842",
+        paddingHorizontal: 40,
+        paddingVertical: 14,
+        borderRadius: 30,
+        shadowColor: "#D17842",
+        shadowOpacity: 0.3,
+        shadowOffset: { width: 0, height: 4 },
+        shadowRadius: 6,
+        elevation: 5,
+    },
+    logoutText: {
+        color: "#fff",
+        fontSize: 16,
+        fontWeight: "bold",
+        letterSpacing: 1,
+    },
+});

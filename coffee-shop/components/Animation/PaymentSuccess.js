@@ -1,18 +1,17 @@
 import { StyleSheet, View, Dimensions } from 'react-native';
 import React from 'react';
 import LottieView from 'lottie-react-native';
-import { BlurView } from 'expo-blur';
 
 const { width, height } = Dimensions.get('window');
 
-const PaymentAnimation = ({ source }) => {
+const PaymentAnimation = ({ source, onFinish }) => {
     return (
         <View style={styles.container}>
-            {/*<BlurView intensity={70} tint="dark" style={StyleSheet.absoluteFill} />*/}
             <LottieView
                 source={source}
                 autoPlay
                 loop={false}
+                onAnimationFinish={onFinish}
                 style={styles.fullscreenAnimation}
                 resizeMode="cover"
             />
