@@ -6,21 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e31f5d76-a080-4678-a823-b01716829f0b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Controller/auth/auth-controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/auth/auth-controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coffee-shop/app.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/coffee-shop/app.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coffee-shop/app/(auth)/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/coffee-shop/app/(auth)/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coffee-shop/app/(auth)/signup.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/coffee-shop/app/(auth)/signup.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coffee-shop/app/(tabs)/_layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/coffee-shop/app/(tabs)/_layout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coffee-shop/app/(tabs)/cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/coffee-shop/app/(tabs)/cart.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coffee-shop/app/(tabs)/history.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/coffee-shop/app/(tabs)/history.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coffee-shop/app/(tabs)/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/coffee-shop/app/(tabs)/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coffee-shop/app/(tabs)/like.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/coffee-shop/app/(tabs)/like.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coffee-shop/app/Profile/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/coffee-shop/app/Profile/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coffee-shop/app/_layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/coffee-shop/app/_layout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coffee-shop/app/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/coffee-shop/app/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coffee-shop/app/payment/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/coffee-shop/app/payment/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coffee-shop/components/Animation/PaymentSuccess.js" beforeDir="false" afterPath="$PROJECT_DIR$/coffee-shop/components/Animation/PaymentSuccess.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coffee-shop/features/auth/authSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/coffee-shop/features/auth/authSlice.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +117,7 @@
       <workItem from="1752838417932" duration="1092000" />
       <workItem from="1752850869274" duration="3691000" />
       <workItem from="1752901837094" duration="13923000" />
-      <workItem from="1752921010290" duration="3004000" />
+      <workItem from="1752921010290" duration="4562000" />
     </task>
     <servers />
   </component>

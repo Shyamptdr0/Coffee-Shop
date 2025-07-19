@@ -70,7 +70,7 @@ export default function Login() {
                     padding: 20,
                     paddingTop: 20,
                     borderRadius: 40,
-                    shadowColor: '#000',
+                    shadowColor: '#000000',
                     shadowOffset: {width: 0, height: 5},
                     shadowOpacity: 0.3,
                     shadowRadius: 8,

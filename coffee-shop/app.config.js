@@ -18,7 +18,7 @@ export default {
             versionCode: 1,
             adaptiveIcon: {
                 foregroundImage: "./assets/logo/huge/1.png",
-                backgroundColor: "#000"
+                backgroundColor: "#000000"
             },
             edgeToEdgeEnabled: true
         },
@@ -35,7 +35,7 @@ export default {
                     image: "./assets/logo/huge/1.png",
                     imageWidth: 200,
                     resizeMode: "contain",
-                    backgroundColor: "#000"
+                    backgroundColor: "#000000"
                 }
             ]
         ],
