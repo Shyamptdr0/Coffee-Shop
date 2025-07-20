@@ -6,7 +6,7 @@ export default {
         slug: "coffee-shop",
         version: "1.0.0",
         orientation: "portrait",
-        icon: "./assets/logo/huge/1.png",
+        icon: "./assets/logo/logo/1.png",
         scheme: "coffeeshop",
         userInterfaceStyle: "automatic",
         newArchEnabled: true,
@@ -17,7 +17,7 @@ export default {
             package: "com.shyamptdr.coffeeshop",
             versionCode: 1,
             adaptiveIcon: {
-                foregroundImage: "./assets/logo/huge/1.png",
+                foregroundImage: "./assets/logo/logo/1.png",
                 backgroundColor: "#000000"
             },
             edgeToEdgeEnabled: true
@@ -32,7 +32,7 @@ export default {
             [
                 "expo-splash-screen",
                 {
-                    image: "./assets/logo/huge/1.png",
+                    image: "./assets/logo/logo/1.png",
                     imageWidth: 200,
                     resizeMode: "contain",
                     backgroundColor: "#000000"

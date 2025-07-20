@@ -29,7 +29,7 @@ export default function HomeCart({ item, onAddToCart }) {
                 shadowOffset: { width: 0, height: 2 },
                 shadowOpacity: 0.1,
                 shadowRadius: 5,
-                height: 290,
+                height: 275,
                 justifyContent: "space-between",
             }}
         >
@@ -106,8 +106,8 @@ export default function HomeCart({ item, onAddToCart }) {
                             key={idx}
                             onPress={() => setSelectedSize(priceObj)}
                             style={{
-                                paddingHorizontal: 8,
-                                paddingVertical: 4,
+                                paddingHorizontal: 14,
+                                paddingVertical: 6,
                                 borderRadius: 6,
                                 marginRight: 6,
                                 marginTop: 4,
@@ -115,7 +115,7 @@ export default function HomeCart({ item, onAddToCart }) {
                                     selectedSize?.size === priceObj.size ? "#D17842" : "#2C2C2C",
                             }}
                         >
-                            <Text style={{ color: "#fff", fontSize: 12 }}>
+                            <Text style={{ color: "#fff", fontSize: 16 }}>
                                 {priceObj.size}
                             </Text>
                         </TouchableOpacity>

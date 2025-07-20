@@ -1,9 +1,9 @@
 import React, {useState} from "react";
-import { View, Text, Image, TouchableOpacity } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
-import { router } from "expo-router";
+import {View, Text, Image, TouchableOpacity} from "react-native";
+import {Ionicons} from "@expo/vector-icons";
+import {router} from "expo-router";
 
-export default function HomeCoffeeBeans({ item , onAddToCart}) {
+export default function HomeCoffeeBeans({item, onAddToCart}) {
     const correctedImageUrl =
         item.imagelink_square?.replace("localhost", "192.168.149.168") ||
         "https://via.placeholder.com/150"; // fallback image
@@ -26,10 +26,10 @@ export default function HomeCoffeeBeans({ item , onAddToCart}) {
                 marginRight: 16,
                 marginBottom: 10,
                 shadowColor: "#000",
-                shadowOffset: { width: 0, height: 2 },
+                shadowOffset: {width: 0, height: 2},
                 shadowOpacity: 0.1,
                 shadowRadius: 5,
-                height: 260,
+                height: 220,
                 justifyContent: "space-between",
             }}
         >
@@ -38,14 +38,14 @@ export default function HomeCoffeeBeans({ item , onAddToCart}) {
                 onPress={() =>
                     router.push({
                         pathname: "/BeansDetails/" + item.id,
-                        params: { item: JSON.stringify(item) }
+                        params: {item: JSON.stringify(item)}
                     })
                 }
             >
                 {/* Image + Rating */}
-                <View style={{ position: "relative" }}>
+                <View style={{position: "relative"}}>
                     <Image
-                        source={{ uri: correctedImageUrl }}
+                        source={{uri: correctedImageUrl}}
                         style={{
                             width: "100%",
                             aspectRatio: 1.5,
@@ -66,8 +66,8 @@ export default function HomeCoffeeBeans({ item , onAddToCart}) {
                             alignItems: "center",
                         }}
                     >
-                        <Ionicons name="star" size={12} color="#fff" />
-                        <Text style={{ color: "#fff", marginLeft: 4, fontSize: 12 }}>
+                        <Ionicons name="star" size={12} color="#fff"/>
+                        <Text style={{color: "#fff", marginLeft: 4, fontSize: 12}}>
                             {item.average_rating || "0.0"}
                         </Text>
                     </View>
@@ -81,10 +81,10 @@ export default function HomeCoffeeBeans({ item , onAddToCart}) {
                     justifyContent: "space-between",
                 }}>
                     <View>
-                        <Text style={{ color: "#fff", fontSize: 16, fontWeight: "700", marginBottom: 4 }}>
+                        <Text style={{color: "#fff", fontSize: 16, fontWeight: "700", marginBottom: 4}}>
                             {item.name}
                         </Text>
-                        <Text style={{ color: "#B0B0B0", fontSize: 13, marginBottom: 8 }}>
+                        <Text style={{color: "#B0B0B0", fontSize: 13, marginBottom: 8}}>
                             {item.special_ingredient}
                         </Text>
                     </View>
@@ -95,35 +95,40 @@ export default function HomeCoffeeBeans({ item , onAddToCart}) {
                     {/*        </Text>*/}
                     {/*    ))}*/}
                     {/*</View>*/}
+
                 </View>
+
             </TouchableOpacity>
 
-            {/* Price + Add Button */}
-            <View
-                style={{
-                    flexDirection: "row",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                }}
-            >
-                <Text style={{ color: "#fff", fontSize: 20 }}>
-                    <Text style={{ color: "#D17842", fontWeight: "600" }}>
-                        {item.prices?.[0]?.currency || "$"}
-                    </Text>{" "}
-                    {item.prices?.[0]?.price || "0.00"}
-                </Text>
+            <View><Text className="text-gray-400">Tap to select for more...</Text></View>
 
-                <TouchableOpacity
-                    onPress={handleAddToCart}
-                    style={{
-                        backgroundColor: "#D17842",
-                        borderRadius: 10,
-                        padding: 6,
-                    }}
-                >
-                    <Ionicons name="add" size={20} color="#fff" />
-                </TouchableOpacity>
-            </View>
+
+            {/* Price + Add Button */}
+            {/*<View*/}
+            {/*    style={{*/}
+            {/*        flexDirection: "row",*/}
+            {/*        alignItems: "center",*/}
+            {/*        justifyContent: "space-between",*/}
+            {/*    }}*/}
+            {/*>*/}
+            {/*    <Text style={{ color: "#fff", fontSize: 20 }}>*/}
+            {/*        <Text style={{ color: "#D17842", fontWeight: "600" }}>*/}
+            {/*            {item.prices?.[0]?.currency || "$"}*/}
+            {/*        </Text>{" "}*/}
+            {/*        {item.prices?.[0]?.price || "0.00"}*/}
+            {/*    </Text>*/}
+
+            {/*    <TouchableOpacity*/}
+            {/*        onPress={handleAddToCart}*/}
+            {/*        style={{*/}
+            {/*            backgroundColor: "#D17842",*/}
+            {/*            borderRadius: 10,*/}
+            {/*            padding: 6,*/}
+            {/*        }}*/}
+            {/*    >*/}
+            {/*        <Ionicons name="add" size={20} color="#fff" />*/}
+            {/*    </TouchableOpacity>*/}
+            {/*</View>*/}
         </View>
     );
 }

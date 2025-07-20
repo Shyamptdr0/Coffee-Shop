@@ -230,7 +230,6 @@ export default function BeansDetails() {
                 <Text style={styles.description}>{currentCoffee.description}</Text>
 
                 <Text style={[styles.sectionTitle, { marginTop: 24 }]}>Size</Text>
-                <Text style={[styles.sectionTitle, { marginTop: 24 }]}>Size</Text>
                 <View style={{ flexDirection: "row", marginTop: 10 }}>
                     {currentCoffee.prices?.map((priceObj) => (
                         <TouchableOpacity
