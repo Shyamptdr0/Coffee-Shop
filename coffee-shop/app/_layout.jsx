@@ -1,25 +1,24 @@
-import React, {useEffect} from "react";
-import {Slot, useRouter, useSegments} from "expo-router";
-import {SafeAreaProvider} from "react-native-safe-area-context";
-import {StatusBar} from "expo-status-bar";
+import React, { useEffect } from "react";
+import { Slot, useRouter, useSegments } from "expo-router";
+import { SafeAreaProvider } from "react-native-safe-area-context";
+import { StatusBar } from "expo-status-bar";
 import "../global.css";
-import {Provider, useDispatch, useSelector} from "react-redux";
+import { Provider, useDispatch, useSelector } from "react-redux";
 import store from "../app/store";
-import {checkAuth} from "../features/auth/authSlice";
-import {ToastProvider} from "react-native-toast-notifications";
-import Ionicons from '@expo/vector-icons/Ionicons';
+import { checkAuth } from "../features/auth/authSlice";
+import { ToastProvider } from "react-native-toast-notifications";
+import Ionicons from "@expo/vector-icons/Ionicons";
+import * as Updates from "expo-updates"; // 👈 Add this
 
-
-function AuthWrapper({children}) {
+function AuthWrapper({ children }) {
     const router = useRouter();
     const dispatch = useDispatch();
     const segments = useSegments();
-    const {isAuthenticated, isLoading} = useSelector((state) => state.auth);
+    const { isAuthenticated, isLoading } = useSelector((state) => state.auth);
 
     useEffect(() => {
         dispatch(checkAuth());
     }, [dispatch]);
-
 
     useEffect(() => {
         if (isLoading || segments.length === 0) return;
@@ -36,6 +35,26 @@ function AuthWrapper({children}) {
     return children;
 }
 
+function UpdateChecker({ children }) {
+    useEffect(() => {
+        const checkForUpdates = async () => {
+            try {
+                const update = await Updates.checkForUpdateAsync();
+                if (update.isAvailable) {
+                    await Updates.fetchUpdateAsync();
+                    await Updates.reloadAsync(); // 💡 This will reload the app with new updates
+                }
+            } catch (e) {
+                console.log("Error checking for updates:", e);
+            }
+        };
+
+        checkForUpdates();
+    }, []);
+
+    return children;
+}
+
 export default function RootLayout() {
     return (
         <Provider store={store}>
@@ -48,15 +67,16 @@ export default function RootLayout() {
                     successColor="#28a745"
                     dangerColor="#dc3545"
                     warningColor="#ffc107"
-                    successIcon={<Ionicons name="checkmark-circle-outline" size={22} color="#fff"/>}
-                    dangerIcon={<Ionicons name="close-circle-outline" size={22} color="#fff"/>}
-                    warningIcon={<Ionicons name="alert-circle-outline" size={22} color="#fff"/>}
+                    successIcon={<Ionicons name="checkmark-circle-outline" size={22} color="#fff" />}
+                    dangerIcon={<Ionicons name="close-circle-outline" size={22} color="#fff" />}
+                    warningIcon={<Ionicons name="alert-circle-outline" size={22} color="#fff" />}
                 >
-
-                    <StatusBar style="light"/>
-                    <AuthWrapper>
-                        <Slot/>
-                    </AuthWrapper>
+                    <StatusBar style="light" />
+                    <UpdateChecker>
+                        <AuthWrapper>
+                            <Slot />
+                        </AuthWrapper>
+                    </UpdateChecker>
                 </ToastProvider>
             </SafeAreaProvider>
         </Provider>
