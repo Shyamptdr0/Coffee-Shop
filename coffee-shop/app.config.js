@@ -25,7 +25,7 @@ export default {
         web: {
             bundler: "metro",
             output: "static",
-            favicon: "./assets/images/logo.png"
+            favicon: "./assets/logo/logo/1.png"
         },
         plugins: [
             "expo-router",
@@ -45,9 +45,7 @@ export default {
         updates: {
             url: "https://u.expo.dev/7745cedd-02b2-4559-95f3-37cc001f1370"
         },
-        runtimeVersion: {
-            policy: "appVersion"
-        },
+        runtimeVersion: "1.0.0",
         extra: {
             BASE_URL: process.env.BASE_URL,
             eas: {
