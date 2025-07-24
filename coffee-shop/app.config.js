@@ -5,6 +5,7 @@ export default {
         name: "Coffee Shop",
         slug: "coffee-shop",
         version: "1.0.0",
+        runtimeVersion: "1.0.0",
         orientation: "portrait",
         icon: "./assets/logo/logo/1.png",
         scheme: "coffeeshop",
@@ -43,9 +44,10 @@ export default {
             typedRoutes: true
         },
         updates: {
-            url: "https://u.expo.dev/7745cedd-02b2-4559-95f3-37cc001f1370"
+            url: "https://u.expo.dev/7745cedd-02b2-4559-95f3-37cc001f1370",
+            fallbackToCacheTimeout: 0,
+            channel: "preview" // Important!
         },
-        runtimeVersion: "1.0.0",
         extra: {
             BASE_URL: process.env.BASE_URL,
             eas: {
