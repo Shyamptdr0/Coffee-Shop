@@ -81,7 +81,7 @@ export default function LikeScreen() {
                 <View style={styles.emptyContainer}>
                     <Image source={logo} style={{width: 200, height: 150}}/>
                     <Text style={styles.emptyText}>Your favorite coffee is waiting... </Text>
-                    <Text style={styles.emptyText}>don’t keep it waiting too long!</Text>
+                    {/*<Text style={styles.emptyText}>don’t keep it waiting too long!</Text>*/}
                 </View>
             ) : (
                 <FlatList
