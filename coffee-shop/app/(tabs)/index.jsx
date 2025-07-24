@@ -203,7 +203,7 @@ export default function Index() {
                     </View>
                 </ScrollView>
 
-                <Text className="text-white text-xl">☕ Welcome to the New Coffee Shop!</Text>
+                <Text className="text-white text-xl">☕ Welcome to the shop!</Text>
 
             </ScrollView>
 

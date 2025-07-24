@@ -6,14 +6,19 @@ import AlertBox from "../AlertBox/UpdateAlert";
 
 const UpdateChecker = ({ children }) => {
     const [showUpdateModal, setShowUpdateModal] = useState(false);
+    const [updateFetched, setUpdateFetched] = useState(false);
+    const [dismissedOnce, setDismissedOnce] = useState(false);
 
     useEffect(() => {
         const checkForUpdates = async () => {
             try {
                 const update = await Updates.checkForUpdateAsync();
                 if (update.isAvailable) {
-                    await Updates.fetchUpdateAsync();
-                    setShowUpdateModal(true); // Show custom alert box
+                    await Updates.fetchUpdateAsync(); // Download but do not apply
+                    setUpdateFetched(true);
+                    if (!dismissedOnce) {
+                        setShowUpdateModal(true);
+                    }
                 }
             } catch (e) {
                 console.log("Error checking for updates:", e);
@@ -21,14 +26,15 @@ const UpdateChecker = ({ children }) => {
         };
 
         checkForUpdates();
-    }, []);
+    }, [dismissedOnce]);
 
     const handleConfirm = () => {
         setShowUpdateModal(false);
-        Updates.reloadAsync(); // Apply update
+        Updates.reloadAsync(); // Apply update now
     };
 
     const handleCancel = () => {
+        setDismissedOnce(true); // Mark as dismissed for this session
         setShowUpdateModal(false);
     };
 
